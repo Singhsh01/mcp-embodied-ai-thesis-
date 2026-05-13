@@ -1,4 +1,4 @@
-# Task 2 — 02_dynamic_discovery_pick_place
+# Task 02_dynamic_discovery_pick_place
 
 Source video: `/Users/shammi/Library/Application Support/Claude/local-agent-mode-sessions/0dcaafcb-a122-41a9-9e42-315c24348c56/7c61949f-ef86-4841-b761-e43b34312bd8/local_7fc68fe9-df3f-4d67-b077-9041946dd876/uploads/Task 2.webm`
 Approximate duration: 80.603601s
