@@ -12,7 +12,7 @@ This example includes the Isaac Sim Docker installation and execution, as well a
 ✅ **Note:** This example is designed to run on Linux with ROS2 installed and has been tested on the following versions:  
 - **OS**: Ubuntu 20.04, 22.04  
 - **ROS2**: Foxy, Humble  
-- **Isaac Sim**: Local versions 4.5.0, 5.0.0 and Docker versions 4.5.0, 5.0.0
+- **Isaac Sim**: Local versions 5.0, 5.1.0 and Docker versions 5.0, 5.1.0
   
 This example is written based on **Docker Isaac Sim 5.0.0** to maximize accessibility and minimize dependencies.
 
