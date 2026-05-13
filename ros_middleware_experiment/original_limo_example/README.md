@@ -109,6 +109,7 @@ If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.5
 
 ### **Example 3** : Simple Movement
 
+<img src="../screenshots/limo_overview/frame_75_threequarter.png" width="1000"> 
 <img src="../screenshots/limo_overview/frame_99_end.png" width="1000">
 
 ## **Next Steps**
