@@ -101,7 +101,7 @@ Once all the above connections are completed, you can connect to and control the
 By default, the Isaac Sim Container is run with the `--network=host` option, so it can access the LIMO robot on the same network as the user's local PC. Therefore, the IP address of the LIMO robot is the same as the user's local PC.
 If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.50.88`, then the IP address of the LIMO robot will also be `192.168.50.88`.
 
-<img src="ros_middleware_experiment/screenshots/limo_overview/frame_25_quarter.png" width="500">
+<img src="../screenshots/limo_overview/frame_25_quarter.png" width="500">
 
 ### **Example 2** : ROS2 Topic Check
 
