@@ -62,7 +62,7 @@ docker cp ./limo_example.usd <container_name>:/example/limo_example.usd
 ### 5. Launch LIMO Example
 Now, double-click the `limo_example.usd` file to run it in Isaac Sim. You should see the LIMO robot loading in the simulation environment as shown below.
 
-<img src="../images/limo_isaac_sim_topic_list.png" width="500">
+<img src="screenshots/limo_overview/preview.gif" width="500">
 
 ### 6. Check Simulation
 Now, let's check if the LIMO robot is running properly in Isaac Sim. Press the play button (▶︎) in Isaac Sim to start the simulation. Once the simulation starts, ROS2 topics that can be used by the LIMO robot will be created through a predefined [Action Graph](https://docs.isaacsim.omniverse.nvidia.com/latest/omnigraph/omnigraph_tutorial.html) within the USD file.  
