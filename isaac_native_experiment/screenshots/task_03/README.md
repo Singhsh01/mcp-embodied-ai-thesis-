@@ -1,4 +1,4 @@
-# Task 3 — LIMO / ROS-MCP middleware experiment — extracted assets
+# Task 03 — Connection check, lighting, workspace camera — evaluation
 
 Source video: `/Users/shammi/Library/Application Support/Claude/local-agent-mode-sessions/0dcaafcb-a122-41a9-9e42-315c24348c56/7c61949f-ef86-4841-b761-e43b34312bd8/local_7fc68fe9-df3f-4d67-b077-9041946dd876/uploads/Task 3.webm`
 Approximate duration: 1154.936935s
