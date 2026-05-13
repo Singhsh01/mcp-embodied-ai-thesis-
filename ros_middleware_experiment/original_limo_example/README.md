@@ -109,7 +109,7 @@ If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.5
 
 ### **Example 3** : Simple Movement
 
-<img src="../images/limo_isaac_sim_simple_movement.gif" width="1000">
+<img src="../screenshots/limo_overview/frame_99_end.png" width="1000">
 
 ## **Next Steps**
 The LIMO is equipped with various sensors, such as vision and LiDAR sensors. Let's make use of them.
