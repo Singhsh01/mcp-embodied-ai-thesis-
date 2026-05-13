@@ -1,0 +1,6 @@
+{"turn": 1, "tool": "isaac-sim:get_scene_info", "args": {}, "outcome": "ok", "result": {"prim_count": 14, "assets_root": "Isaac 5.1"}}
+{"turn": 2, "tool": "isaac-sim:list_prims", "args": {"root_path": "/"}, "outcome": "ok", "note": "verified that 14 prims are all Kit defaults, not user content"}
+{"turn": 3, "tool": "isaac-sim:create_physics_scene", "args": {"scene_name": "PhysicsScene"}, "outcome": "ok", "result": "/World/PhysicsScene"}
+{"turn": 4, "tool": "isaac-sim:create_light", "args": {"prim_path": "/World/Lights/DomeLight", "light_type": "dome", "intensity": 3000, "color": [1.0, 1.0, 1.0]}, "outcome": "ok"}
+{"turn": 5, "tool": "isaac-sim:create_light", "args": {"prim_path": "/World/Lights/KeyLight", "light_type": "distant", "intensity": 5000, "color": [1.0, 0.98, 0.95], "rotation": [-45, 0, 30]}, "outcome": "ok"}
+{"turn": 6, "tool": "isaac-sim:create_camera", "args": {"prim_path": "/World/WorkspaceCamera", "position": [2, -2, 1.5], "rotation": [65, 0, 45], "resolution": [1280, 720]}, "outcome": "ok"}

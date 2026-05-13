@@ -1,0 +1,23 @@
+{"turn": 1, "tool": "isaac-sim:list_environments", "args": {}, "outcome": "ok", "result": {"warehouse_like": ["digital_twin_warehouse", "simple_warehouse", "modular_warehouse_props"], "chosen": "simple_warehouse"}}
+{"turn": 2, "tool": "isaac-sim:load_environment", "args": {"environment": "simple_warehouse"}, "outcome": "ok"}
+{"turn": 3, "tool": "isaac-sim:create_camera", "args": {"prim_path": "/World/SceneCamera", "note": "positioned to capture all 3 Frankas + Go1"}, "outcome": "ok"}
+{"turn": 4, "tool": "isaac-sim:capture_image", "args": {"camera_prim_path": "/World/SceneCamera"}, "outcome": "error", "error": "'NoneType' has no __array_interface__", "failure_mode": "MCP capture_image tool returns None from RGB annotator on this server"}
+{"turn": 5, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 5}, "outcome": "ok", "note": "trying to give renderer time to produce a frame"}
+{"turn": 6, "tool": "isaac-sim:capture_image", "args": {"camera_prim_path": "/World/SceneCamera"}, "outcome": "error", "error": "'NoneType' has no __array_interface__"}
+{"turn": 7, "tool": "isaac-sim:get_isaac_logs", "args": {}, "outcome": "ok", "result": "0 errors logged"}
+{"turn": 8, "tool": "isaac-sim:execute_script", "args": {"code": "manually attach RGB annotator to render product"}, "outcome": "ok", "result": "annotator attached, shape=(0,) - no pixels"}
+{"turn": 9, "tool": "isaac-sim:execute_script", "args": {"code": "save frame to /home/claude/... on Isaac host"}, "outcome": "error", "error": "path not accessible from Isaac process", "self_correction": true, "failure_mode": "scene-state mismatch: claude filesystem != isaac filesystem (same lesson as session 1)"}
+{"turn": 10, "tool": "isaac-sim:capture_image", "args": {"camera_prim_path": "/World/SceneCamera"}, "outcome": "error", "error": "'NoneType' has no __array_interface__"}
+{"turn": 11, "tool": "isaac-sim:execute_script", "args": {"code": "step_async + spin app.update()"}, "outcome": "error", "error": "step_async never completes - blocking the event loop", "self_correction": true}
+{"turn": 12, "tool": "isaac-sim:capture_image", "args": {"camera_prim_path": "/World/WorkspaceCamera"}, "outcome": "error", "error": "'NoneType' has no __array_interface__", "note": "confirmed the bug is server-side, not caused by our render-product fiddling"}
+{"turn": 13, "tool": "isaac-sim:play_simulation", "args": {}, "outcome": "ok"}
+{"turn": 14, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 30}, "outcome": "ok"}
+{"turn": 15, "tool": "isaac-sim:capture_image", "args": {"camera_prim_path": "/World/SceneCamera"}, "outcome": "error", "error": "'NoneType' has no __array_interface__"}
+{"turn": 16, "tool": "isaac-sim:execute_script", "args": {"code": "use isaacsim.sensors.camera.Camera directly, save PNG to /tmp/scene_capture.png"}, "outcome": "ok", "result": {"shape": [1080, 1920, 3], "path": "/tmp/scene_capture.png"}, "self_correction": true, "note": "bypassed broken capture_image tool"}
+{"turn": 17, "tool": "isaac-sim:execute_script", "args": {"code": "base64 PNG via stdout"}, "outcome": "partial", "result": "PNG too large; only chunks C000-C021 received", "failure_mode": "MCP stdout truncation for large blobs"}
+{"turn": 18, "tool": "isaac-sim:execute_script", "args": {"code": "re-save smaller PNG, re-encode"}, "outcome": "partial", "result": "~64KB b64, still chunked"}
+{"turn": 19, "tool": "create_file", "args": {"chunks": "C000-C021"}, "outcome": "partial", "result": "only 3KB of 64KB reassembled"}
+{"turn": 20, "tool": "isaac-sim:execute_script", "args": {"code": "re-encode as small JPEG"}, "outcome": "ok", "result": "16652-char b64 in single stdout block", "self_correction": true}
+{"turn": 21, "tool": "bash_tool", "args": {"command": "decode b64 -> JPEG, inspect"}, "outcome": "ok", "result": "real scene image: warehouse floor, Go1 visible at right edge"}
+{"turn": 22, "tool": "(observation)", "args": {"note": "framing too low - camera aimed at floor; mid-flight resolution change caused a horizontal seam artifact"}, "outcome": "ok"}
+{"turn": 23, "tool": "isaac-sim:execute_script", "args": {"code": "reposition /World/SceneCamera to view (2, 1, 0) from -Y and up, re-capture at fixed resolution"}, "outcome": "initiated", "note": "chat narrative ends here; final reframed capture not confirmed in transcript"}
