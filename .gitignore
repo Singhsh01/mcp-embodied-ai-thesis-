@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Videos / large media
+*.mp4
+*.mov
+*.avi
+
+# ROS / Isaac generated
+build/
+install/
+log/
+
+# VSCode
+.vscode/
+
+# Python environments
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary
+tmp/
+temp/
+
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.synctex.gz
+
+# Cache
+.cache/
