@@ -27,7 +27,7 @@ Follow the instructions on the [Isaac Sim Container Installation](https://docs.i
 ### 2. Download Isaac Sim WebRTC Streaming Client
 Follow the instructions on the [Isaac Sim WebRTC Streaming Client](https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/download.html#isaac-sim-latest-release) to download and install the WebRTC streaming client.    
 In this example, the WebRTC Streaming Client was downloaded and executed as follows.  
-<img src="../images/isaac_sim_webrtc_streaming_client_version.png" width="500">
+
 
 ### 3. Check Installation
 To verify that the Isaac Sim Container and WebRTC Streaming Client are properly installed, please follow the steps below.
