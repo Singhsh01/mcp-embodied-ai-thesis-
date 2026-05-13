@@ -43,9 +43,6 @@ After that, move to the folder where you downloaded the Isaac Sim WebRTC Streami
 ./isaacsim-webrtc-streaming-client-1.1.4-linux-x64.AppImage
 ```
 
-When the GUI is displayed as shown below, it means the application has been launched successfully.
-
-<img src="../images/isaac_sim_webrtc_streaming_client.png" width="500">
 
 If the above steps have been executed successfully, press the Connect button on the Isaac Sim WebRTC Streaming Client to check if the Isaac Sim screen appears.  
 ✅ **Note:** This example is based on installing and running the Isaac Sim container and the Isaac Sim WebRTC streaming client on the same local PC. Therefore, the server address for the Isaac Sim WebRTC Streaming Client is `127.0.0.1`. If the Isaac Sim container is running on another PC, you need to enter the IP address of that PC.
@@ -61,17 +58,11 @@ docker exec <container_name> mkdir -p /example # default container_name : isaac-
 docker cp ./limo_example.usd <container_name>:/example/limo_example.usd
 ```
 
-If successfully copied, you can verify the USD file in the Isaac Sim screen as shown below.
-```bash
-Path : My Computer > / > example > limo_example.usd
-```
-
-<img src="../images/limo_isaac_sim_usd_path.png" width="500">
 
 ### 5. Launch LIMO Example
 Now, double-click the `limo_example.usd` file to run it in Isaac Sim. You should see the LIMO robot loading in the simulation environment as shown below.
 
-<img src="../images/limo_isaac_sim.png" width="500">
+<img src="../images/limo_isaac_sim_topic_list.png" width="500">
 
 ### 6. Check Simulation
 Now, let's check if the LIMO robot is running properly in Isaac Sim. Press the play button (▶︎) in Isaac Sim to start the simulation. Once the simulation starts, ROS2 topics that can be used by the LIMO robot will be created through a predefined [Action Graph](https://docs.isaacsim.omniverse.nvidia.com/latest/omnigraph/omnigraph_tutorial.html) within the USD file.  
