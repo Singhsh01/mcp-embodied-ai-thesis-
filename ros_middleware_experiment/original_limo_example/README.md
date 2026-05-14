@@ -106,12 +106,14 @@ If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.5
 ### **Example 2** : ROS2 Topic Check
 
 <img src="../screenshots/task_08/frame_99_end.png" width="1000"> 
+
 <img src="../screenshots/task_06/frame_75_threequarter.png " width="1000">
 
 ### **Example 3** : Simple Movement
 
-<img src="../screenshots/limo_overview/frame_75_threequarter.png" width="1000"> 
-<img src="../screenshots/limo_overview/frame_99_end.png" width="1000">
+<img src="../screenshots/task_07/frame_75_threequarter.png" width="1000"> 
+
+<img src="../screenshots/task_07/frame_99_end.png" width="1000">
 
 ## **Next Steps**
 
@@ -119,6 +121,5 @@ The LIMO is equipped with various sensors, such as vision and LiDAR sensors. Let
 
 <img src="../screenshots/task_08/frame_75_threequarter.png" width="1000"> 
 
-Image 8b
 
 <img src="../screenshots/task_08/frame_99_end.png" width="1000"> 
