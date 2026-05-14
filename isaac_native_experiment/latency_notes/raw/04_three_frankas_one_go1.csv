@@ -1,6 +1,0 @@
-sample_idx,warmup,tool_name,op,arg_key,t_llm_to_mcp_ms,t_mcp_to_kit_ms,t_kit_handler_ms,t_total_ms,return_dominated,failed,note
-0,false,isaac-sim:list_available_robots,info,,,,,,false,false,
-1,false,isaac-sim:create_robot,mutate,robot_type=franka pos=[0,0,0],,,,,false,false,
-2,false,isaac-sim:create_robot,mutate,robot_type=franka pos=[2,0,0],,,,,false,false,
-3,false,isaac-sim:create_robot,mutate,robot_type=franka pos=[4,0,0],,,,,false,false,
-4,false,isaac-sim:create_robot,mutate,robot_type=go1 pos=[1,3,0],,,,,false,false,
