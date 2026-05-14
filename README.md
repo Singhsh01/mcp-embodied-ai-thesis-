@@ -75,7 +75,7 @@ The following previews show MCP-driven embodied orchestration inside Isaac Sim, 
 | Task Preview | Demonstration |
 |---|---|
 | FR3 Pick-and-Place Workflow | ![FR3 Pick and Place](./figures/ScreenRecording2026-05-14at8.27.48PM-ezgif.com-video-to-gif-converter.gif) |
-| Limo Mobile Robot| ![Dynamic Scene Interaction](./figures/ScreenRecording2026-05-14at8.32.05PM-ezgif.com-video-to-gif-converter.gif) |
+| Limo Mobile Robot| ![Limo navigation](./figures/ScreenRecording2026-05-14at8.32.05PM-ezgif.com-video-to-gif-converter.gif) |
 
 ## 3. Repository structure
 
