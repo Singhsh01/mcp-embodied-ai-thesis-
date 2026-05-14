@@ -70,7 +70,8 @@ You can verify the available topics for the LIMO robot by running the ros2 topic
 ```bash
 ros2 topic list
 ```
-<img src="../images/limo_isaac_sim_topic_list.png" width="500">
+
+<img src="../screenshots/limo_overview/limo_isaac_sim_topic_list.png" width="800">
 
 As shown in the figure, `/camera/image_raw`, `/cmd_vel`, and `/scan` must appear as essential topics.
 
