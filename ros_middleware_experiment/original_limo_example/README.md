@@ -103,8 +103,9 @@ If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.5
 <img src="../screenshots/limo_overview/frame_25_quarter.png" width="800">
 
 ### **Example 2** : ROS2 Topic Check
+ros_middleware_experiment/screenshots/task_06/frame_75_threequarter.png
 
-<img src="../images/limo_isaac_sim_check_topic.png" width="500">
+<img src="./screenshots/task_06/frame_75_threequarter.png " width="500">
 
 ### **Example 3** : Simple Movement
 
