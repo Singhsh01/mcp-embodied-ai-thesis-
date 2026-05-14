@@ -117,4 +117,6 @@ If the local PC's IP address, confirmed by the `ifconfig` command, is `192.168.5
 The LIMO is equipped with various sensors, such as vision and LiDAR sensors. Let's make use of them.
 
 <img src="../screenshots/task_08/frame_75_threequarter.png" width="1000"> 
+
+
 <img src="../screenshots/task_08/frame_99_end.png" width="1000"> 
