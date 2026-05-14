@@ -29,3 +29,8 @@
 - **Tool-call trace:** `../orchestration_logs/04_three_frankas_one_go1.jsonl`
 - **Generated scripts:** *(none — all work was direct MCP tool calls)*
 - **Scoring:** `../evaluation_notes/04_three_frankas_one_go1.md`
+
+## Video 
+![FR3 Pick and Place](../../figures/ScreenRecording2026-05-14at10.52.07PM-ezgif.com-video-to-gif-converter.gif)
+
+
