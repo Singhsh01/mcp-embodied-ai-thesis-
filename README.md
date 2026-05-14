@@ -70,6 +70,13 @@ This pipeline is studied for:
 - the latency overhead of the rosbridge hop,
 - and how middleware abstractions shape what the LLM can express.
 
+The following previews show MCP-driven embodied orchestration inside Isaac Sim, including scene interaction, simulator-native manipulation workflows, and closed-loop execution through Action Graphs and RMPflow.
+
+| Task Preview | Demonstration |
+|---|---|
+| FR3 Pick-and-Place Workflow | ![FR3 Pick and Place](./figures/ScreenRecording2026-05-14at8.27.48PM-ezgif.com-video-to-gif-converter.gif) |
+| Limo Mobile Robot| ![Dynamic Scene Interaction](./figures/ScreenRecording2026-05-14at8.32.05PM-ezgif.com-video-to-gif-converter.gif) |
+
 ## 3. Repository structure
 
 ```
