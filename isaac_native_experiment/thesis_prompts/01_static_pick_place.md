@@ -29,3 +29,6 @@
 - **Generated controller:** `../generated_scripts/01_static_pick_place_controller.py` (original) and `..._fixed.py` (FR3 preset + TCP frame fix)
 - **Scoring:** `../evaluation_notes/01_static_pick_place.md`
 - **Screenshots:** *(none captured during this run)*
+
+## Video
+
