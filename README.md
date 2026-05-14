@@ -88,7 +88,7 @@ Master Thesis/
 │   ├── thesis_prompts/
 │   ├── orchestration_logs/
 │   ├── screenshots/
-│   ├── latency_notes/              ← round-trip-time measurements, rosbridge overhead
+│   ├── latency_notes/              
 │   └── evaluation_notes/
 │
 ├── diagrams/                       ← architecture diagrams (drawio, svg, png)
