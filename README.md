@@ -82,7 +82,7 @@ The following previews show MCP-driven embodied orchestration inside Isaac Sim, 
 ```
 Master Thesis/
 ├── isaac_native_experiment/
-│   ├── isaacsim-mcp-server-main/   ← upstream Isaac Sim MCP server (unmodified)
+│   ├── isaacsim-mcp-server-main/   ← upstream Isaac Sim MCP server 
 │   ├── thesis_prompts/             ← natural-language tasks issued to the agent
 │   ├── generated_scripts/          ← any Python / Kit scripts the agent produced
 │   ├── screenshots/                ← screenshots captured during runs
@@ -99,7 +99,7 @@ Master Thesis/
 │   └── evaluation_notes/
 │
 ├── diagrams/                       ← architecture diagrams (drawio, svg, png)
-├── figures/                        ← polished figures used in the thesis PDF
+├── figures/                        ← figures used in the thesis PDF
 ├── thesis_pdf/                     ← the compiled thesis document
 │
 ├── README.md                       ← this file
