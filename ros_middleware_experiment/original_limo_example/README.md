@@ -14,7 +14,7 @@ This example includes the Isaac Sim Docker installation and execution, as well a
 - **ROS2**: Foxy, Humble  
 - **Isaac Sim**: Local versions 5.0, 5.1.0 and Docker versions 5.0, 5.1.0
   
-This example is written based on **Docker Isaac Sim 5.0.0** to maximize accessibility and minimize dependencies.
+This example is written based on **Docker Isaac Sim 5.1.0** to maximize accessibility and minimize dependencies.
 
 Before starting this example, make sure you have the following installed:
 - **ROS2** : [Install ROS2](https://docs.ros.org/en/dashing/Installation/Ubuntu-Install-Binary.html)
