@@ -120,9 +120,9 @@ Each experiment follows the same shape, so results are directly comparable acros
 6. For the middleware pipeline, latency is sampled at three points (agent → MCP, MCP → rosbridge, rosbridge → ROS) and recorded in `latency_notes/`.
 7. A short qualitative scoring is written into `evaluation_notes/` (task completion, failure mode, recovery, expressivity).
 
-## 5. Relation to the thesis
+## 5. Context
 
-The thesis chapters map onto this workspace as follows:
+The context map onto this workspace as follows:
 
 | Thesis section                       | Evidence in this repo                                              |
 | ------------------------------------ | ------------------------------------------------------------------ |
