@@ -47,7 +47,6 @@ After that, move to the folder where you downloaded the Isaac Sim WebRTC Streami
 If the above steps have been executed successfully, press the Connect button on the Isaac Sim WebRTC Streaming Client to check if the Isaac Sim screen appears.  
 ✅ **Note:** This example is based on installing and running the Isaac Sim container and the Isaac Sim WebRTC streaming client on the same local PC. Therefore, the server address for the Isaac Sim WebRTC Streaming Client is `127.0.0.1`. If the Isaac Sim container is running on another PC, you need to enter the IP address of that PC.
 
-<img src="../images/isaac_sim_streaming.png" width="500">
 
 ### 4. Copy LIMO example USD file to Isaac Sim
 Copy the USD file of the LIMO robot created for this example to Isaac Sim.
