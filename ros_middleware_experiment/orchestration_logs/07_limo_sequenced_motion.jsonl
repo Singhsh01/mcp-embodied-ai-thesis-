@@ -1,0 +1,14 @@
+{"turn": 1, "tool": "isaac-sim:get_simulation_state", "args": {}, "outcome": "ok", "result": "paused"}
+{"turn": 2, "tool": "create_file", "args": {"path": "/home/claude/demo/limo_drive.py"}, "outcome": "ok", "note": "file created on MCP client side"}
+{"turn": 3, "tool": "isaac-sim:execute_script", "args": {"code": "import /home/claude/demo/limo_drive.py"}, "outcome": "error", "error": "file not accessible from Isaac process", "failure_mode": "MCP client filesystem != Isaac host filesystem", "self_correction": true}
+{"turn": 4, "tool": "isaac-sim:execute_script", "args": {"code": "inline phase 1 (forward, FL+, FR-, RL+, RR-)"}, "outcome": "ok"}
+{"turn": 5, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 180}, "outcome": "ok", "note": "3s forward"}
+{"turn": 6, "tool": "isaac-sim:get_joint_state", "args": {"prim_path": "/Root/limo_ROS"}, "outcome": "ok", "result": "forward phase complete, wheels rotating"}
+{"turn": 7, "tool": "isaac-sim:execute_script", "args": {"code": "inline phase 2 (backward, FL-, FR+, RL-, RR+)"}, "outcome": "ok"}
+{"turn": 8, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 240}, "outcome": "ok", "note": "4s backward"}
+{"turn": 9, "tool": "isaac-sim:execute_script", "args": {"code": "inline phase 3 (pivot right, all wheels same sign)"}, "outcome": "ok"}
+{"turn": 10, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 120}, "outcome": "ok", "note": "2s pivot right"}
+{"turn": 11, "tool": "isaac-sim:execute_script", "args": {"code": "inline stop (all zeros)"}, "outcome": "ok"}
+{"turn": 12, "tool": "isaac-sim:step_simulation", "args": {"num_steps": 30}, "outcome": "ok", "note": "0.5s settle"}
+{"turn": 13, "tool": "isaac-sim:get_joint_state", "args": {"prim_path": "/Root/limo_ROS"}, "outcome": "ok", "result": {"wheel_pos_rad": 0.277, "wheel_vel_rad_s": -0.0002, "interpretation": "settled, stopped"}}
+{"turn": 14, "tool": "isaac-sim:get_isaac_logs", "args": {}, "outcome": "ok", "result": "no errors"}

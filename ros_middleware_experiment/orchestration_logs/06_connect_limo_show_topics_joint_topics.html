@@ -1,0 +1,98 @@
+
+<style>
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  .live-dot { display:inline-block;width:8px;height:8px;border-radius:50%;background:#1D9E75;animation:pulse 1.5s ease-in-out infinite;margin-right:6px;vertical-align:middle; }
+</style>
+
+<div style="padding:1rem 0">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem">
+    <span class="live-dot"></span>
+    <span style="font-size:13px;color:var(--color-text-secondary);font-family:var(--font-mono)">/Root/limo_ROS</span>
+    <span style="font-size:11px;background:var(--color-background-success);color:var(--color-text-success);padding:2px 8px;border-radius:4px">Connected</span>
+  </div>
+
+  <div style="margin-bottom:1.5rem">
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em">Robot info</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">Type</p>
+        <p style="font-size:15px;font-weight:500;margin:0">Limo ROS</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">DOF</p>
+        <p style="font-size:15px;font-weight:500;margin:0">4</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">Drive</p>
+        <p style="font-size:15px;font-weight:500;margin:0">Angular</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em">Joint topics</p>
+    <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="background:var(--color-background-secondary)">
+            <th style="padding:8px 12px;text-align:left;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Joint</th>
+            <th style="padding:8px 12px;text-align:left;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Type</th>
+            <th style="padding:8px 12px;text-align:right;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Position (rad)</th>
+            <th style="padding:8px 12px;text-align:right;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Target (rad)</th>
+            <th style="padding:8px 12px;text-align:right;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Stiffness</th>
+            <th style="padding:8px 12px;text-align:right;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Damping</th>
+            <th style="padding:8px 12px;text-align:left;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary)">Limits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary)">
+            <td style="padding:10px 12px;font-family:var(--font-mono);font-size:12px">front_left_wheel</td>
+            <td style="padding:10px 12px"><span style="background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:2px 6px;border-radius:4px">revolute</span></td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.000394</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">1e6</td>
+            <td style="padding:10px 12px;color:var(--color-text-secondary);font-size:12px">unlimited</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary)">
+            <td style="padding:10px 12px;font-family:var(--font-mono);font-size:12px">front_right_wheel</td>
+            <td style="padding:10px 12px"><span style="background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:2px 6px;border-radius:4px">revolute</span></td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.000394</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">1e6</td>
+            <td style="padding:10px 12px;color:var(--color-text-secondary);font-size:12px">unlimited</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary)">
+            <td style="padding:10px 12px;font-family:var(--font-mono);font-size:12px">rear_left_wheel</td>
+            <td style="padding:10px 12px"><span style="background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:2px 6px;border-radius:4px">revolute</span></td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.000394</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">1e6</td>
+            <td style="padding:10px 12px;color:var(--color-text-secondary);font-size:12px">unlimited</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px;font-family:var(--font-mono);font-size:12px">rear_right_wheel</td>
+            <td style="padding:10px 12px"><span style="background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:2px 6px;border-radius:4px">revolute</span></td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.000396</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">0.0</td>
+            <td style="padding:10px 12px;text-align:right;font-family:var(--font-mono)">1e6</td>
+            <td style="padding:10px 12px;color:var(--color-text-secondary);font-size:12px">unlimited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;padding:10px 14px;background:var(--color-background-warning);border-radius:var(--border-radius-md);display:flex;align-items:center;gap:8px">
+    <i class="ti ti-info-circle" style="font-size:16px;color:var(--color-text-warning)" aria-hidden="true"></i>
+    <span style="font-size:12px;color:var(--color-text-warning)">Stiffness = 0 on all joints — velocity (damping-only) drive mode active. Robot moves via velocity commands, not position targets.</span>
+  </div>
+
+  <div style="margin-top:12px;display:flex;gap:8px">
+    <button onclick="sendPrompt('Move the limo robot forward')" style="font-size:13px">Move robot forward ↗</button>
+    <button onclick="sendPrompt('Show me the simulation state')" style="font-size:13px">Simulation state ↗</button>
+  </div>
+</div>
