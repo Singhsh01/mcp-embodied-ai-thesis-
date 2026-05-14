@@ -32,4 +32,5 @@
 
 ## Video
 FR3 Pick-and-Place Workflow  ![FR3 Pick and Place](../figures/ScreenRecording2026-05-14at8.27.48PM-ezgif.com-video-to-gif-converter.gif)
+![FR3 Pick and Place](../../figures/fr3_pick_place.gif)
 
