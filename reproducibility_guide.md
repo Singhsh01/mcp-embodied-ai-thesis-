@@ -176,22 +176,8 @@ For each task in `ros_middleware_experiment/thesis_prompts/`:
 4. Save the full Claude transcript to `orchestration_logs/` as Markdown.
 5. Note the round-trip latency for at least one representative tool call into `latency_notes/` — see §6.
 
-## 6. Latency measurement protocol
 
-For the middleware-centric experiment the latency of a single tool call decomposes as:
-
-```
-T_total  =  T_LLM->MCP  +  T_MCP->rosbridge  +  T_rosbridge->ROS  +  T_ROS->topic
-```
-
-The thesis reports `T_MCP→rosbridge` and `T_rosbridge→ROS` independently:
-
-- `T_MCP→rosbridge` — instrument the MCP tool wrapper to log `time.perf_counter()` before and after the `roslibpy`/WebSocket publish call.
-- `T_rosbridge→ROS` — compare the rosbridge log timestamp with the `header.stamp` of the resulting ROS 2 message (or with the time the subscriber callback fires, when no `header.stamp` is available).
-
-Record the per-task measurements as a small CSV in `ros_middleware_experiment/latency_notes/`.
-
-## 7. Troubleshooting
+## 6. Troubleshooting
 
 | Symptom                                              | Likely cause / fix                                                                                          |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -201,7 +187,7 @@ Record the per-task measurements as a small CSV in `ros_middleware_experiment/la
 | MCP tool calls succeed but the robot doesn't move    | The simulation is paused, or the topic publishes but no controller is downstream.                           |
 | High variance in latency measurements                | Other GPU workloads (browsers, recording software) are competing for the GPU — close them before measuring. |
 
-## 8. Cleanup between runs
+## 7. Cleanup between runs
 
 ```bash
 # Optional: clear Omniverse cache between sessions if you suspect stale assets
@@ -210,7 +196,7 @@ rm -rf ~/.cache/ov/Kit/*
 # inherit a stale physics state).
 ```
 
-## 9. Version pinning summary
+## 8. Version pinning summary
 
 | Component           | Pinned version (thesis baseline) |
 | ------------------- | -------------------------------- |
