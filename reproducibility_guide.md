@@ -217,7 +217,7 @@ rm -rf ~/.cache/ov/Kit/*
 | Ubuntu              | 22.04 LTS                        |
 | ROS 2               | Humble Hawksbill                 |
 | rosbridge_suite     | ros-humble-rosbridge-suite (apt) |
-| Isaac Sim           | 4.2.0                            |
+| Isaac Sim           | 5.1.0                            |
 | NVIDIA driver       | 535+                             |
 | Python (host)       | 3.10                             |
 | `uv`                | latest at time of build          |
