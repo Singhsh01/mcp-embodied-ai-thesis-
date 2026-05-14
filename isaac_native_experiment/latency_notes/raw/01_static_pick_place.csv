@@ -1,0 +1,55 @@
+sample_idx,warmup,tool_name,op,arg_key,t_llm_to_mcp_ms,t_mcp_to_kit_ms,t_kit_handler_ms,t_total_ms,return_dominated,failed,note
+0,true,isaac-sim:get_scene_info,info,,,,,,false,false,"in-session"
+1,true,isaac-sim:clear_scene,mutate,keep_physics=false,,,,,false,false,"in-session"
+2,true,isaac-sim:create_physics_scene,mutate,,,,,,false,false,"in-session"
+3,true,isaac-sim:list_available_robots,info,,,,,,false,false,"in-session"
+4,true,isaac-sim:create_robot,mutate,robot_type=frankafr3,,,,,false,false,"in-session"
+5,false,isaac-sim:create_object,mutate,object_type=Cube,,,,,false,false,
+6,false,isaac-sim:create_object,mutate,object_type=Cube,,,,,false,false,
+7,false,isaac-sim:create_material,mutate,material_type=pbr,,,,,false,false,
+8,false,isaac-sim:create_material,mutate,material_type=pbr,,,,,false,false,
+9,false,isaac-sim:apply_material,mutate,,,,,,false,false,
+10,false,isaac-sim:apply_material,mutate,,,,,,false,false,
+11,false,isaac-sim:create_object,mutate,object_type=Cube physics=true,,,,,false,false,
+12,false,isaac-sim:apply_material,mutate,,,,,,false,false,
+13,false,isaac-sim:get_prim_info,info,/World/Table1,,,,,false,false,
+14,false,isaac-sim:get_prim_info,info,/World/Table2,,,,,false,false,
+15,false,isaac-sim:get_prim_info,info,/World/TargetCube,,,,,false,false,
+16,false,create_file,exec,client-side,,,,,false,false,"MCP-client local file write; not Kit-side"
+17,false,isaac-sim:create_action_graph,mutate,,,,,,false,false,
+18,false,isaac-sim:play_simulation,mutate,,,,,,false,false,
+19,false,isaac-sim:step_simulation,exec,num_steps=5,,,,,false,false,"floor 83 ms"
+20,false,isaac-sim:get_isaac_logs,info,,,,,,false,false,
+21,false,isaac-sim:step_simulation,exec,num_steps=300,,,,,false,false,"floor 5000 ms"
+22,false,isaac-sim:execute_script,exec,inspect ScriptNode,,,,,false,false,
+23,false,isaac-sim:execute_script,exec,filesystem check,,,,,false,true,"discovered MCP/Isaac filesystem split"
+24,false,bash_tool,exec,base64-encode,,,,,false,false,"client-side"
+25,false,isaac-sim:execute_script,exec,write file to /home/sing/...,,,,,false,false,
+26,false,isaac-sim:edit_action_graph,mutate,,,,,,false,false,
+27,false,isaac-sim:step_simulation,exec,num_steps=30,,,,,false,false,"floor 500 ms"
+28,false,isaac-sim:get_isaac_logs,info,,,,,,false,true,"surfaced KeyError: 'panda_joint1'"
+29,false,isaac-sim:execute_script,exec,enumerate presets,,,,,false,false,
+30,false,str_replace,exec,client-side,,,,,false,false,
+31,false,isaac-sim:pause_simulation,mutate,,,,,,false,false,
+32,false,isaac-sim:execute_script,exec,USD translateOp reset,,,,,false,false,
+33,false,isaac-sim:edit_action_graph,mutate,,,,,,false,false,
+34,false,isaac-sim:play_simulation,mutate,,,,,,false,false,
+35,false,isaac-sim:step_simulation,exec,num_steps=10,,,,,false,true,"cube ejected (USD vs PhysX desync)"
+36,false,isaac-sim:pause_simulation,mutate,,,,,,false,false,
+37,false,isaac-sim:get_physics_state,info,/World/TargetCube,,,,,false,false,
+38,false,isaac-sim:get_physics_state,info,/World/Table1,,,,,false,false,
+39,false,isaac-sim:execute_script,exec,timeline.stop,,,,,false,false,
+40,false,isaac-sim:get_prim_info,info,/World/TargetCube,,,,,false,false,
+41,false,isaac-sim:play_simulation,mutate,,,,,,false,false,
+42,false,isaac-sim:step_simulation,exec,num_steps=5,,,,,false,false,"floor 83 ms"
+43,false,isaac-sim:get_isaac_logs,info,,,,,,false,false,
+44,false,isaac-sim:step_simulation,exec,num_steps=200,,,,,false,false,"floor 3333 ms; still no motion"
+45,false,isaac-sim:execute_script,exec,re-inspect ScriptNode,,,,,false,false,
+46,false,isaac-sim:execute_script,exec,direct Usd.Attribute.Set,,,,,false,false,
+47,false,isaac-sim:step_simulation,exec,num_steps=10,,,,,false,false,
+48,false,isaac-sim:step_simulation,exec,num_steps=200,,,,,false,false,"floor 3333 ms; success path"
+49,false,isaac-sim:get_isaac_logs,info,,,,,,false,false,
+50,false,isaac-sim:step_simulation,exec,num_steps=60,,,,,false,false,"floor 1000 ms; settle"
+51,false,isaac-sim:pause_simulation,mutate,,,,,,false,false,
+52,false,bash_tool,exec,copy controller,,,,,false,false,"client-side"
+53,false,present_files,exec,client-side,,,,,false,false,

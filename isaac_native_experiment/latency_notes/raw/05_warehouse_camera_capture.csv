@@ -1,0 +1,23 @@
+sample_idx,warmup,tool_name,op,arg_key,t_llm_to_mcp_ms,t_mcp_to_kit_ms,t_kit_handler_ms,t_total_ms,return_dominated,failed,note
+0,false,isaac-sim:list_environments,info,,,,,,false,false,
+1,false,isaac-sim:load_environment,mutate,environment=simple_warehouse,,,,,false,false,"warehouse asset load; expected large t_kit_handler_ms"
+2,false,isaac-sim:create_camera,mutate,/World/SceneCamera,,,,,false,false,
+3,false,isaac-sim:capture_image,render,/World/SceneCamera,,,,,false,true,"NoneType has no __array_interface__; failure mode"
+4,false,isaac-sim:step_simulation,exec,num_steps=5,,,,,false,false,"floor 83 ms"
+5,false,isaac-sim:capture_image,render,/World/SceneCamera,,,,,false,true,"same failure"
+6,false,isaac-sim:get_isaac_logs,info,,,,,,false,false,
+7,false,isaac-sim:execute_script,exec,attach RGB annotator,,,,,false,false,
+8,false,isaac-sim:execute_script,exec,save to /home/claude/...,,,,,false,true,"filesystem boundary"
+9,false,isaac-sim:capture_image,render,,,,,,false,true,
+10,false,isaac-sim:execute_script,exec,step_async,,,,,false,true,"never completes (event loop)"
+11,false,isaac-sim:capture_image,render,/World/WorkspaceCamera,,,,,false,true,"clean camera; same failure confirms server-side bug"
+12,false,isaac-sim:play_simulation,mutate,,,,,,false,false,
+13,false,isaac-sim:step_simulation,exec,num_steps=30,,,,,false,false,"floor 500 ms"
+14,false,isaac-sim:capture_image,render,/World/SceneCamera,,,,,false,true,
+15,false,isaac-sim:execute_script,exec,Camera sensor API bypass,,,,,true,false,"return-dominated (PNG payload)"
+16,false,isaac-sim:execute_script,exec,base64 PNG via stdout,,,,,true,false,"truncated; transport limit"
+17,false,isaac-sim:execute_script,exec,re-save smaller PNG,,,,,true,false,
+18,false,create_file,exec,client-side,,,,,false,false,
+19,false,isaac-sim:execute_script,exec,re-encode as JPEG,,,,,true,false,"single-chunk success"
+20,false,bash_tool,exec,decode and inspect,,,,,false,false,"client-side"
+21,false,isaac-sim:execute_script,exec,reposition + recapture,,,,,true,false,"final framing; not confirmed in chat"

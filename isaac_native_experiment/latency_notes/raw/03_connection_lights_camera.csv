@@ -1,0 +1,7 @@
+sample_idx,warmup,tool_name,op,arg_key,t_llm_to_mcp_ms,t_mcp_to_kit_ms,t_kit_handler_ms,t_total_ms,return_dominated,failed,note
+0,true,isaac-sim:get_scene_info,info,,,,,,false,false,
+1,true,isaac-sim:list_prims,info,root=/,,,,,false,false,
+2,true,isaac-sim:create_physics_scene,mutate,,,,,,false,false,
+3,true,isaac-sim:create_light,mutate,type=dome,,,,,false,false,
+4,true,isaac-sim:create_light,mutate,type=distant,,,,,false,false,
+5,false,isaac-sim:create_camera,mutate,resolution=1280x720,,,,,false,false,
