@@ -39,9 +39,9 @@ The thesis contribution is **explicitly not** the two servers above. The contrib
 1. **Side-by-side reproduction** of both pipelines on the same workstation, the same Isaac Sim version, and (wherever physically meaningful) the same simulated robot scene — so that any difference in behaviour is attributable to the orchestration architecture rather than to environmental drift.
 2. **Architectural comparison** between simulation-native and middleware-centric MCP orchestration, formalized through the diagrams in `diagrams/` and discussed in the thesis body.
 3. **Orchestration-layer evaluation**: prompt design, MCP tool-call traces, agent self-correction behaviour, failure-mode taxonomy. Per-task evidence lives under each experiment's `orchestration_logs/` and `evaluation_notes/`.
-4. **Latency analysis** of the middleware-centric pipeline (decomposed into agent → MCP, MCP → rosbridge, rosbridge → ROS hops). Raw measurements live under `ros_middleware_experiment/latency_notes/`.
+4. **Latency analysis** of the middleware-centric pipeline (decomposed into agent → MCP, MCP → rosbridge, rosbridge → ROS hops).
 5. **Two recording campaigns on the simulation-native pipeline**: a four-task prompt set (`isaac_native_experiment/screenshots/task_0{1,2,3,5}/`) that feeds the qualitative-evaluation section, and a five-run **repeatability study** of the same Franka pick-and-place task (`isaac_native_experiment/screenshots/franka_pick_place_0{1..5}/`) that supports the per-run variance discussion.
-6. **The reproducibility package itself** — `README.md`, `reproducibility_guide.md`, and this `ATTRIBUTION.md` together let an independent reader replicate every experiment in the thesis on a clean machine.
+
 
 Items 1–6 are original work for this thesis; items 1–5 build on top of the upstream servers without modifying them.
 
